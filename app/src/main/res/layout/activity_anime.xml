@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.AnimeActivity">
+
+    <ImageView
+        android:id="@+id/ivAnime"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/tvMainTitleStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Main Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Main Title"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainTitleStatic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCanonicalTitleStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Canonical Title"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvCanonicalTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Main Title"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitleStatic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tvTypeStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Main Title"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvTypeStatic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tvYearStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvType"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tvYearStatic" />
+
+    <TextView
+        android:id="@+id/tvRatingStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Average Rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAnime"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatingStatic" />
+
+    <TextView
+        android:id="@+id/tvAgeStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Age Rating"
+        app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
+        app:layout_constraintTop_toBottomOf="@+id/ivAnime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvAgeRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvRating"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeStatic" />
+
+    <TextView
+        android:id="@+id/tvDurationStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Episode Duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDurationStatic" />
+
+    <TextView
+        android:id="@+id/tvStatusStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Airing Status"
+        app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvRating"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusStatic" />
+
+    <TextView
+        android:id="@+id/tvSynopsisStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Synopsis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tvSynopsis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSynopsisStatic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

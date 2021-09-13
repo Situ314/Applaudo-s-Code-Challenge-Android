@@ -12,7 +12,10 @@
         android:text="Categoría"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/rvAnimes">
+        app:layout_constraintBottom_toTopOf="@id/rvAnimes"
+        android:padding="10dp"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp">
 
     </TextView>
     <androidx.recyclerview.widget.RecyclerView
@@ -20,9 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:paddingStart="4dp"
-        android:paddingLeft="4dp"
-        android:paddingEnd="4dp"
-        android:paddingRight="4dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="@id/tvCategoryTitle"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

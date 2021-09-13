@@ -1,7 +1,10 @@
 package com.applaudo.kitsu.data.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class AttributesAnime (
     @SerializedName("canonicalTitle") var canonicalTitle : String,
     @SerializedName("synopsis") var synopsis : String,
@@ -16,4 +19,4 @@ data class AttributesAnime (
     @SerializedName("averageRating") var averageRating : String,
     @SerializedName("episodeLength") var episodeLength : Int,
     @SerializedName("status") var status : String
-)
+) : Parcelable

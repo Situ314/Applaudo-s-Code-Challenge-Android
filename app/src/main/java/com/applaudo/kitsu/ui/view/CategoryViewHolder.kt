@@ -21,7 +21,7 @@ class CategoryViewHolder(view: View): RecyclerView.ViewHolder(view) {
     fun bind(category: Category, animes: MutableList<Anime>, context: Context){
         binding.tvCategoryTitle.text = category.attributes.title
 
-        animeAdapter = AnimeAdapter(animes)
+        animeAdapter = AnimeAdapter(animes, context)
         binding.rvAnimes.setHasFixedSize(true)
         binding.rvAnimes.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvAnimes.adapter = animeAdapter

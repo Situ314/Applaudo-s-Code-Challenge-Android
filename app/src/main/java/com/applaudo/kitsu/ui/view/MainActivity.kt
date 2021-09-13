@@ -2,6 +2,7 @@ package com.applaudo.kitsu.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     lateinit var categoryAdapter: CategoryAdapter
-
 
     lateinit var categoriesList: List<Category>
 
