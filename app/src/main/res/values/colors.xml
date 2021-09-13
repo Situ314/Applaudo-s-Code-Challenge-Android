@@ -7,5 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#388E3C</color>
+    <color name="status_airing">#388E3C</color>
+    <color name="status_finished">#D32F2F</color>
+    <color name="youtube_red">#FF0000</color>
+
+    <color name="red_primary">#79001A</color>
+    <color name="red_primary_2">#b41e31</color>
+    <color name="red_primary_3">#b63848</color>
+    <color name="green_secondary">#00795f</color>
+    <color name="green_secondary_2">#004d36</color>
+
 </resources>

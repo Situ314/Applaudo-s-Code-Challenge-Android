@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Kitsu</string>
+        <string name="app_name">Kitsu (Applaudo)</string>
+    <string name="main_title_label">Main Title</string>
+    <string name="canonical_title_label">Canonical Title</string>
+    <string name="type_label">Type</string>
+    <string name="year_label">Year</string>
+    <string name="average_rating_label">Average Rating</string>
+    <string name="age_rating_label">Age Rating</string>
+    <string name="episode_duration_label">Episode Duration</string>
+    <string name="airing_status_label">Airing Status</string>
+    <string name="ver_trailer_button">Watch Trailer</string>
+    <string name="share_button">Share</string>
+    <string name="synopsis_label">Synopsis</string>
 </resources>

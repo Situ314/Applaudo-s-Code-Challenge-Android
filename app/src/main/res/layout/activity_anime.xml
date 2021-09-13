@@ -1,202 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.AnimeActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:id="@+id/ivAnime"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="5dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.AnimeActivity">
 
-    <TextView
-        android:id="@+id/tvMainTitleStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Main Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/purple_700"/>
+        <ImageView
+            android:id="@+id/ivAnime"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/tvYear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"/>
 
-    <TextView
-        android:id="@+id/tvMainTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Main Title"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvMainTitleStatic"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tvMainTitleStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvCanonicalTitleStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Canonical Title"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Main Title"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainTitleStatic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:padding="5dp"/>
 
-    <TextView
-        android:id="@+id/tvCanonicalTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Main Title"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitleStatic"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tvCanonicalTitleStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/canonical_title_label"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvTypeStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Type"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvCanonicalTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Main Title"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitleStatic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="2"
+            android:textSize="15sp"
 
-    <TextView
-        android:id="@+id/tvType"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Main Title"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvTypeStatic"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="5dp"/>
+            android:padding="5dp"/>
 
-    <TextView
-        android:id="@+id/tvYearStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Year"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvType"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvTypeStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/type_label"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvCanonicalTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvYear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAnime"
-        app:layout_constraintTop_toBottomOf="@+id/tvYearStatic" />
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Main Title"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvTypeStatic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:padding="5dp"/>
 
-    <TextView
-        android:id="@+id/tvRatingStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Average Rating"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivAnime"
-        app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvYearStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/year_label"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvType"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvRating"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRatingStatic" />
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAnime"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvYearStatic" />
 
-    <TextView
-        android:id="@+id/tvAgeStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Age Rating"
-        app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
-        app:layout_constraintTop_toBottomOf="@+id/ivAnime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.5"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvRatingStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/average_rating_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvYear"
+            app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvAgeRating"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvRating"
-        app:layout_constraintTop_toBottomOf="@+id/tvAgeStatic" />
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="year"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingStatic" />
 
-    <TextView
-        android:id="@+id/tvDurationStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Episode Duration"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
-        app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
-        android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvAgeStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/age_rating_label"
+            app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
+            app:layout_constraintTop_toBottomOf="@+id/tvYear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvDuration"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDurationStatic" />
+        <TextView
+            android:id="@+id/tvAgeRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="year"
+            android:textSize="15sp"
 
-    <TextView
-        android:id="@+id/tvStatusStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Airing Status"
-        app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
-        app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.5"
-        android:textColor="@color/purple_700"/>
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgeStatic" />
 
-    <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvRating"
-        app:layout_constraintTop_toBottomOf="@+id/tvStatusStatic" />
+        <TextView
+            android:id="@+id/tvDurationStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/episode_duration_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
+            app:layout_constraintEnd_toStartOf="@+id/tvAgeStatic"
+            android:padding="5dp"
+            android:paddingStart="10dp"
 
-    <TextView
-        android:id="@+id/tvSynopsisStatic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Synopsis"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDuration"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/purple_700"/>
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
 
-    <TextView
-        android:id="@+id/tvSynopsis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="year"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSynopsisStatic" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:text="year"
+            app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDurationStatic" />
+
+        <TextView
+            android:id="@+id/tvStatusStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/airing_status_label"
+            app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgeRating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="year"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:textColor="@color/status_airing"
+            app:layout_constraintStart_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusStatic" />
+
+        <Button
+            android:id="@+id/btnYoutube"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/ver_trailer_button"
+            app:layout_constraintEnd_toStartOf="@+id/tvAgeRating"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            android:backgroundTint="@color/youtube_red"
+            app:icon = "@drawable/ic_baseline_play_arrow_24"/>
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/share_button"
+            app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/green_secondary_2"
+            android:textSize="12sp"
+            app:icon = "@drawable/ic_baseline_share_24"/>
+
+        <TextView
+            android:id="@+id/tvSynopsisStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/synopsis_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary_3"/>
+
+        <TextView
+            android:id="@+id/tvSynopsis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="year"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSynopsisStatic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

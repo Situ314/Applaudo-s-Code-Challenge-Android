@@ -19,11 +19,11 @@ class AnimeViewHolder(view: View): RecyclerView.ViewHolder(view) {
     private val binding = AnimeItemBinding.bind(view)
 
     fun bind(anime: Anime, context: Context){
-        Log.e("CHECK ANIME HHOLDER ", anime.attributes.canonicalTitle)
+
         binding.tvAnimeTitle.text = anime.attributes.canonicalTitle
         Picasso.get().load(anime.attributes.posterImage.medium).into(binding.ivAnime)
+
         itemView.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, anime.attributes.canonicalTitle, Toast.LENGTH_SHORT).show()
             val intent = Intent(context, AnimeActivity::class.java)
             intent.putExtra("anime", anime)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

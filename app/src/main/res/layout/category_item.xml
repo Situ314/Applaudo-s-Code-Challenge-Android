@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/rvAnimes"
         android:padding="10dp"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/red_primary_3"
         android:textSize="20sp">
 
     </TextView>

@@ -1,17 +1,12 @@
 package com.applaudo.kitsu.ui.view
 
 import android.content.Context
-import android.util.Log
 import android.view.View
-import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.applaudo.kitsu.data.model.Anime
 import com.applaudo.kitsu.data.model.Category
 import com.applaudo.kitsu.databinding.CategoryItemBinding
-import com.applaudo.kitsu.domain.GetAnimesUseCase
-import com.applaudo.kitsu.ui.viewmodel.CategoryViewModel
-
 
 
 class CategoryViewHolder(view: View): RecyclerView.ViewHolder(view) {
