@@ -1,5 +1,6 @@
 package com.applaudo.kitsu.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,15 +16,21 @@ class CategoryViewModel @Inject constructor(
 ) : ViewModel() {
     val categoryModel = MutableLiveData<CategoriesResponse?>()
     val isLoading = MutableLiveData<Boolean>()
+    val isFailing = MutableLiveData<Boolean>()
 
     fun onCreate() {
         viewModelScope.launch {
-            isLoading.postValue(true)
-            val result = getCategoriesUseCase()
-
-            categoryModel.postValue(result)
-            isLoading.postValue(false)
+            try{
+                isFailing.postValue(false)
+                isLoading.postValue(true)
+                val result = getCategoriesUseCase()
+                categoryModel.postValue(result)
+                isLoading.postValue(false)
+            }catch(e: Exception) {
+                isLoading.postValue(false)
+                isFailing.postValue(true)
+                Log.e("Error", e.message.toString())
+            }
         }
     }
-
 }

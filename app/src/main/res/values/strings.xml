@@ -11,4 +11,5 @@
     <string name="ver_trailer_button">Watch Trailer</string>
     <string name="share_button">Share</string>
     <string name="synopsis_label">Synopsis</string>
+    <string name="generic_error_message_main">Ups! There was a mistake loading the data, please try again later.</string>
 </resources>

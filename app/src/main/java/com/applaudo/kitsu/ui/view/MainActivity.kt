@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var categoryAdapter: CategoryAdapter
 
-    lateinit var categoriesList: List<Category>
-
     private val categoryViewModel: CategoryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +69,6 @@ class MainActivity : AppCompatActivity() {
                             snackbar.show()
                         }
                     }else{
-                        Log.e("ASD","VACIO");
                         setAdapterCategory(it!!.data.toMutableList(), it!!.anime, applicationContext)
                     }
 
@@ -87,6 +84,10 @@ class MainActivity : AppCompatActivity() {
 
         categoryViewModel.isLoading.observe(this, Observer {
             binding.loading.isVisible = it
+        })
+
+        categoryViewModel.isFailing.observe(this, Observer {
+            binding.lyError.isVisible = it
         })
 
     }
