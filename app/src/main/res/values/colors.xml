@@ -11,10 +11,10 @@
     <color name="status_finished">#D32F2F</color>
     <color name="youtube_red">#FF0000</color>
 
-    <color name="red_primary">#79001A</color>
-    <color name="red_primary_2">#b41e31</color>
-    <color name="red_primary_3">#b63848</color>
-    <color name="green_secondary">#00795f</color>
-    <color name="green_secondary_2">#004d36</color>
+    <color name="red_primary">#C62828</color>
+    <color name="red_primary_2">#F44336</color>
+    <color name="red_primary_3">#FF5252</color>
+    <color name="yellow_secondary">#FFA726</color>
+    <color name="yellow_secondary_2">#FFEE58</color>
 
 </resources>

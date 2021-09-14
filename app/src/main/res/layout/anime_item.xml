@@ -17,6 +17,10 @@
             android:layout_height="150dp"
             android:scaleType="centerCrop"/>
 
+        <View android:background="@color/yellow_secondary_2"
+            android:layout_width = "match_parent"
+            android:layout_height="3dp"/>
+
         <TextView
             android:id="@+id/tvAnimeTitle"
             android:layout_width="match_parent"

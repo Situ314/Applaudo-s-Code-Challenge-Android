@@ -9,17 +9,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.view.AnimeActivity">
+        tools:context=".ui.view.AnimeActivity"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/ivAnime"
             android:layout_width="150dp"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="@+id/tvYear"
+            app:layout_constraintBottom_toBottomOf="@id/tvYear"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            />
 
         <TextView
             android:id="@+id/tvMainTitleStatic"
@@ -241,7 +243,7 @@
             app:layout_constraintStart_toEndOf="@+id/tvRatingStatic"
             app:layout_constraintTop_toBottomOf="@+id/tvStatus"
             app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/green_secondary_2"
+            android:backgroundTint="@color/yellow_secondary"
             android:textSize="12sp"
             app:icon = "@drawable/ic_baseline_share_24"/>
 
