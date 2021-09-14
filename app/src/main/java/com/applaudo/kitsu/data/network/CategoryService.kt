@@ -15,7 +15,7 @@ class CategoryService @Inject constructor() {
     suspend fun getCategories(): CategoriesResponse? {
         return withContext(Dispatchers.IO) {
             val response = retrofit.create(CategoryApiClient::class.java)
-                .getCategories("anime","canonicalTitle,synopsis,titles,youtubeVideoId,showType,episodeCount,posterImage,startDate,endDate,genres,slug,ageRatingGuide,averageRating,episodeLength,status")
+                .getCategories("anime","canonicalTitle,synopsis,titles,youtubeVideoId,showType,episodeCount,posterImage,startDate,endDate,genres,slug,ageRatingGuide,averageRating,episodeLength,status","20")
             response.body()
         }
     }

@@ -13,11 +13,7 @@ interface CategoryApiClient {
     suspend fun getCategories(
         @Query("include") field: String,
         @Query("fields[anime]") anime: String,
+        @Query("page[limit]") page: String,
     ): Response<CategoriesResponse?>
 
-    @GET("api/edge/anime")
-    suspend fun getAnimes(
-        @Query("filter[categories]") filter: String,
-        @Query("fields[anime]") fields: String,
-    ): Response<AnimesResponse?>
 }
