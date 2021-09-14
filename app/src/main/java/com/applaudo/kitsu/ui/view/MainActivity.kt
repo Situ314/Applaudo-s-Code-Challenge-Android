@@ -13,6 +13,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.applaudo.kitsu.data.model.Anime
 import com.applaudo.kitsu.data.model.Category
 import com.applaudo.kitsu.databinding.ActivityMainBinding
@@ -29,15 +30,20 @@ class MainActivity : AppCompatActivity() {
 
     private val categoryViewModel: CategoryViewModel by viewModels()
 
+    lateinit var swipeContainer: SwipeRefreshLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         categoryViewModel.onCreate()
+
+        binding.swipeContainer.setOnRefreshListener {
+            binding.swipeContainer.isRefreshing = false
+            categoryViewModel.onCreate()
+        }
 
         categoryViewModel.categoryModel.observe(this, Observer {
             setAdapterCategory(it!!.data.toMutableList(), it!!.anime, applicationContext)
