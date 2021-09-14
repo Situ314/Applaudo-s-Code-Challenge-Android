@@ -17,7 +17,6 @@ class AnimeAdapter(private val animes: List<Anime>, private val context: Context
 
     override fun onBindViewHolder(holder: AnimeViewHolder, position: Int) {
         val item = animes[position]
-        Log.e("CHECK ANIME HHOLDER ", item.attributes.canonicalTitle)
         holder.bind(item,context)
     }
 
