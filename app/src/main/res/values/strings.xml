@@ -1,5 +1,5 @@
 <resources>
-        <string name="app_name">Kitsu (Applaudo)</string>
+    <string name="app_name">Kitsu (Applaudo)</string>
     <string name="main_title_label">Main Title</string>
     <string name="canonical_title_label">Canonical Title</string>
     <string name="type_label">Type</string>

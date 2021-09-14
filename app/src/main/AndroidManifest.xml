@@ -12,14 +12,15 @@
         android:roundIcon="@mipmap/ic_icon_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kitsu">
-        <activity android:name=".ui.view.AnimeActivity"></activity>
-        <activity android:name=".ui.view.MainActivity">
+        <activity android:name=".ui.view.SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.view.AnimeActivity" />
+        <activity android:name=".ui.view.MainActivity"/>
     </application>
 
 </manifest>
