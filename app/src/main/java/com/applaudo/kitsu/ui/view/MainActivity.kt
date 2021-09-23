@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         categoryViewModel.categoryModel.observe(this, Observer {
-            setAdapterCategory(it!!.data.toMutableList(), it!!.anime, applicationContext)
+            setAdapterCategory(it!!.data.toMutableList(), it.anime, applicationContext)
 
             binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String): Boolean {
@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
                         val animeFiltered = mutableListOf<Anime>()
                         val categoryFiltered = mutableListOf<Category>()
 
-                        for(category in it!!.data){
-                            for(anime in it!!.anime){
+                        for(category in it.data){
+                            for(anime in it.anime){
                                 if(anime.attributes.canonicalTitle.toLowerCase().startsWith(query.toLowerCase()) && category.relationships.anime_category.anime_data.filter { it.id == anime.id }.isNotEmpty()){
                                     animeFiltered.add(anime)
                                     if (category !in categoryFiltered)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                             snackbar.show()
                         }
                     }else{
-                        setAdapterCategory(it!!.data.toMutableList(), it!!.anime, applicationContext)
+                        setAdapterCategory(it.data.toMutableList(), it.anime, applicationContext)
                     }
 
                     hideKeyboard()

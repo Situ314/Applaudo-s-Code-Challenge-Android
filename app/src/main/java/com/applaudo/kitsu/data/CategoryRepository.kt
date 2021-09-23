@@ -5,11 +5,11 @@ import com.applaudo.kitsu.data.model.CategoryProvider
 import com.applaudo.kitsu.data.network.CategoryService
 import javax.inject.Inject
 
-class CategoryRepository @Inject constructor(private val api : CategoryService) {
+class CategoryRepository @Inject constructor(private val api : CategoryService, private val categoryProvider: CategoryProvider) {
 
     suspend fun getCategories():CategoriesResponse?{
         val response = api.getCategories()
-        CategoryProvider.category_response = response
+        categoryProvider.category_response = response
         return response
     }
 }
